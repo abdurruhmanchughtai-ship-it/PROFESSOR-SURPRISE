@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+
+<title>A Special Surprise for Huraiya ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #d9b56e;
+  --light-gold: #f5dfaa;
+  --black: #080808;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--black);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%,
+      rgba(145, 105, 43, .17),
+      transparent 55%),
+    radial-gradient(circle at top left,
+      rgba(194, 148, 71, .09),
+      transparent 35%),
+    #080808;
+  z-index: -1;
+}
+
+/* GOLDEN PARTICLES */
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ambient span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #e9c77f;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #eac77e;
+  opacity: .5;
+  animation: floatParticle 8s infinite ease-in-out;
+}
+
+.ambient span:nth-child(1) {
+  left: 12%; top: 20%;
+}
+
+.ambient span:nth-child(2) {
+  left: 84%; top: 30%;
+  animation-delay: 2s;
+}
+
+.ambient span:nth-child(3) {
+  left: 25%; top: 80%;
+  animation-delay: 4s;
+}
+
+.ambient span:nth-child(4) {
+  left: 75%; top: 75%;
+  animation-delay: 1s;
+}
+
+.ambient span:nth-child(5) {
+  left: 50%; top: 12%;
+  animation-delay: 3s;
+}
+
+.ambient span:nth-child(6) {
+  left: 90%; top: 60%;
+  animation-delay: 2.5s;
+}
+
+@keyframes floatParticle {
+  0%,100% {
+    transform: translateY(0);
+    opacity: .2;
+  }
+  50% {
+    transform: translateY(-35px);
+    opacity: .9;
+  }
+}
+
+/* PAGE SYSTEM */
+
+.page {
+  display: none;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 18px;
+}
+
+.page.active {
+  display: flex;
+  animation: pageReveal 1s ease both;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LUXURY FRAME */
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  padding: 65px 38px;
+  text-align: center;
+  background:
+    linear-gradient(145deg,
+      rgba(30,26,19,.97),
+      rgba(10,10,10,.98),
+      rgba(27,22,14,.97));
+  border: 1px solid rgba(215,177,100,.6);
+  box-shadow:
+    0 0 60px rgba(200,155,70,.08),
+    inset 0 0 35px rgba(200,155,70,.035);
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(215,177,100,.23);
+  pointer-events: none;
+}
+
+.corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: var(--gold);
+  border-style: solid;
+  opacity: .8;
+}
+
+.top-left {
+  top: 5px;
+  left: 5px;
+  border-width: 2px 0 0 2px;
+}
+
+.top-right {
+  top: 5px;
+  right: 5px;
+  border-width: 2px 2px 0 0;
+}
+
+.bottom-left {
+  bottom: 5px;
+  left: 5px;
+  border-width: 0 0 2px 2px;
+}
+
+.bottom-right {
+  bottom: 5px;
+  right: 5px;
+  border-width: 0 2px 2px 0;
+}
+
+/* TYPOGRAPHY */
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.ornament {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 29px;
+  margin: 16px 0;
+}
+
+.gold-text {
+  background: linear-gradient(
+    110deg,
+    #987136,
+    #f5dfaa,
+    #c39b54,
+    #fff0c1,
+    #987136
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldShine 5s linear infinite;
+}
+
+@keyframes goldShine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* FIRST PAGE */
+
+.surprise-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(35px, 8vw, 55px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.her-name {
+  display: block;
+  font-size: clamp(54px, 12vw, 79px);
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 13px;
+}
+
+.intro {
+  max-width: 390px;
+  margin: 23px auto 32px;
+  color: #c7c0b2;
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 300;
+  letter-spacing: .4px;
+}
+
+/* BUTTONS */
+
+.gold-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 30px;
+  border: 1px solid #e7c77e;
+  background: linear-gradient(
+    110deg,
+    #a57a36,
+    #f0d493,
+    #b18743
+  );
+  color: #171107;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .35s ease;
+  box-shadow: 0 0 25px rgba(209,166,82,.13);
+}
+
+.gold-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(230,192,112,.3);
+  background: #f7e6b6;
+}
+
+.gold-button:active {
+  transform: scale(.97);
+}
+
+/* SECOND PAGE */
+
+.birthday-icon {
+  font-size: 62px;
+  margin-bottom: 17px;
+  display: inline-block;
+  filter: drop-shadow(0 0 15px rgba(223,181,98,.3));
+  animation: cakeFloat 3s infinite ease-in-out;
+}
+
+@keyframes cakeFloat {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.birthday-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 9vw, 62px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.birthday-name {
+  display: block;
+  font-size: clamp(52px, 12vw, 76px);
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+.subtitle {
+  margin-top: 19px;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #c7a35d;
+}
+
+.message {
+  max-width: 425px;
+  margin: 30px auto;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 300;
+  color: #e5ddcf;
+  letter-spacing: .15px;
+}
+
+.message strong {
+  color: var(--light-gold);
+  font-weight: 500;
+}
+
+.message-divider {
+  width: 65px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+  margin: 24px auto;
+}
+
+.signature {
+  font-family: 'Cormorant Garamond', serif;
+  color: #e4c17c;
+  font-style: italic;
+  font-size: 20px;
+  margin-top: 19px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.back-button {
+  border: 1px solid rgba(220,185,114,.45);
+  background: transparent;
+  color: #d9bd7c;
+  padding: 15px 22px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.footer {
+  margin-top: 35px;
+  color: #927947;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+/* CONFETTI */
+
+#confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* MOBILE */
+
+@media(max-width: 480px) {
+  .frame {
+    padding: 55px 25px;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .intro {
+    font-size: 11px;
+  }
+
+  .message {
+    font-size: 12px;
+    line-height: 2;
+    margin: 27px auto;
+  }
+
+  .footer {
+    letter-spacing: 2px;
+  }
+
+  .gold-button {
+    padding: 16px 23px;
+    font-size: 9px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="ambient">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+</div>
+
+<canvas id="confetti"></canvas>
+
+
+<!-- PAGE ONE: SURPRISE -->
+
+<section class="page active" id="pageOne">
+
+  <div class="frame">
+
+    <span class="corner top-left"></span>
+    <span class="corner top-right"></span>
+    <span class="corner bottom-left"></span>
+    <span class="corner bottom-right"></span>
+
+    <p class="eyebrow">
+      A LITTLE SOMETHING FOR YOU
+    </p>
+
+    <div class="ornament">✧</div>
+
+    <h1 class="surprise-title gold-text">
+      A Special Surprise
+      <span class="her-name">Huraiya</span>
+    </h1>
+
+    <div class="ornament">❧</div>
+
+    <p class="intro">
+      Some moments deserve to be celebrated in a special way.
+      So here's a little surprise, made especially for you.
+      <br>
+      Something beautiful is waiting inside...
+    </p>
+
+    <button class="gold-button" onclick="openSurprise()">
+      OPEN YOUR SURPRISE <span>✦</span>
+    </button>
+
+    <div class="footer">
+      CREATED WITH LOVE · JUST FOR YOU
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE TWO: BIRTHDAY WISH -->
+
+<section class="page" id="pageTwo">
+
+  <div class="frame">
+
+    <span class="corner top-left"></span>
+    <span class="corner top-right"></span>
+    <span class="corner bottom-left"></span>
+    <span class="corner bottom-right"></span>
+
+    <p class="eyebrow">
+      TODAY IS ALL ABOUT YOU
+    </p>
+
+    <div class="birthday-icon">🎂</div>
+
+    <h2 class="birthday-heading gold-text">
+      Happy Birthday
+      <span class="birthday-name">Huraiya ❤️</span>
+    </h2>
+
+    <p class="subtitle">
+      A BEAUTIFUL SOUL DESERVES A BEAUTIFUL DAY
+    </p>
+
+    <div class="message-divider"></div>
+
+    <div class="message">
+
+      You deserve all the happiness this world has to offer.
+      May your life always be filled with beautiful moments,
+      genuine smiles, endless love, and dreams coming true.
+
+      <br><br>
+
+      I hope this new chapter brings you everything you've
+      been wishing for. Never stop smiling, never stop shining,
+      and always remember how special you are.
+
+      <br><br>
+
+      <strong>
+        Stay blessed, stay happy, and keep being YOU! ✨❤️
+      </strong>
+
+    </div>
+
+    <div class="message-divider"></div>
+
+    <div class="signature">
+      With Love, Always ❤️
+    </div>
+
+    <div class="ornament">✧</div>
+
+    <div class="button-group">
+
+      <button class="gold-button" onclick="celebrateAgain()">
+        CELEBRATE AGAIN ✨
+      </button>
+
+      <button class="gold-button back-button" onclick="goBack()">
+        ← BACK
+      </button>
+
+    </div>
+
+    <div class="footer">
+      A DAY AS SPECIAL AS YOU
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+/* PAGE TRANSITIONS */
+
+const pageOne = document.getElementById("pageOne");
+const pageTwo = document.getElementById("pageTwo");
+
+function openSurprise() {
+  pageOne.classList.remove("active");
+  pageTwo.classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  if (!window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches) {
+    setTimeout(celebrateAgain, 350);
+  }
+}
+
+function goBack() {
+  pageTwo.classList.remove("active");
+  pageOne.classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* GOLD CONFETTI ANIMATION */
+
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+let animationId = null;
+
+function resizeCanvas() {
+  const dpr = Math.min(
+    window.devicePixelRatio || 1, 2
+  );
+
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+const colors = [
+  "#f6df9c",
+  "#d9b56e",
+  "#b88b45",
+  "#fff0c2",
+  "#ffffff",
+  "#987136"
+];
+
+function celebrateAgain() {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight * .40;
+
+  for (let i = 0; i < 180; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 8 + 2;
+
+    particles.push({
+      x: centerX,
+      y: centerY,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 2,
+      size: Math.random() * 6 + 3,
+      color: colors[
+        Math.floor(Math.random() * colors.length)
+      ],
+      rotation: Math.random() * 360,
+      rotationSpeed: Math.random() * 10 - 5,
+      gravity: .10 + Math.random() * .07,
+      life: 1
+    });
+  }
+
+  if (!animationId) {
+    animate();
+  }
+}
+
+function animate() {
+  ctx.clearRect(
+    0, 0,
+    window.innerWidth,
+    window.innerHeight
+  );
+
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+
+    p.vy += p.gravity;
+    p.vx *= .99;
+
+    p.rotation += p.rotationSpeed;
+    p.life -= .004;
+
+    ctx.save();
+
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation * Math.PI / 180);
+
+    ctx.globalAlpha = Math.max(p.life, 0);
+    ctx.fillStyle = p.color;
+
+    ctx.fillRect(
+      -p.size / 2,
+      -p.size / 2,
+      p.size,
+      p.size * .65
+    );
+
+    ctx.restore();
+  });
+
+  particles = particles.filter(
+    p => p.life > 0 && p.y < window.innerHeight + 30
+  );
+
+  if (particles.length > 0) {
+    animationId = requestAnimationFrame(animate);
+  } else {
+    cancelAnimationFrame(animationId);
+    animationId = null;
+
+    ctx.clearRect(
+      0, 0,
+      window.innerWidth,
+      window.innerHeight
+    );
+  }
+}
+
+</script>
+
+</body>
+</html>
